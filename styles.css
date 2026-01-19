@@ -1,0 +1,366 @@
+:root {
+    --dk-orange: #f36b21;
+    --dk-blue: #005a8d;
+    --dk-dark: #121212;
+    --dk-light: #f8f9fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION - Mobile Optimized */
+.navbar {
+    background: white;
+    border-bottom: 3px solid var(--dk-blue);
+    padding: 12px 0;
+}
+
+.nav-link {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #333 !important;
+    margin: 0 8px;
+    transition: 0.3s;
+    padding: 8px 12px !important;
+}
+
+.nav-link:hover {
+    color: var(--dk-orange) !important;
+}
+
+/* Language Switcher */
+.lang-btn {
+    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover {
+    transform: scale(1.05);
+}
+
+.lang-btn.active {
+    background: var(--dk-orange) !important;
+}
+
+/* HERO SECTION - Mobile Responsive */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1500');
+    min-height: 85vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    clip-path: ellipse(160% 100% at 50% 0%);
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.typing-text {
+    color: var(--dk-orange);
+    font-weight: bold;
+    border-right: 3px solid;
+    animation: blink 0.7s infinite;
+    display: inline-block;
+    min-width: 200px;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* TITRES (Style Barre Orange) - Mobile Optimized */
+.section-header {
+    display: flex;
+    align-items: center;
+    margin: 50px 0 35px;
+    flex-wrap: wrap;
+}
+
+.section-header::before {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: var(--dk-orange);
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.section-header h2 {
+    color: var(--dk-orange);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    letter-spacing: 1px;
+}
+
+/* CARTES ET SERVICES - Mobile Optimized */
+.dk-card {
+    border: 2px solid var(--dk-blue);
+    border-radius: 15px;
+    padding: 25px;
+    transition: 0.4s;
+    height: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.dk-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--dk-orange);
+}
+
+.icon-box {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    color: var(--dk-blue);
+    margin-bottom: 20px;
+}
+
+/* IMAGES PROJETS - Mobile Optimized */
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.5s;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+}
+
+/* TECHNOLOGIES - Mobile Optimized */
+.tech-icon {
+    width: 60px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+    margin: 15px;
+    opacity: 0.6;
+}
+
+.tech-icon:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* RECRUTEMENT STATS - Mobile Optimized */
+.stats-bg {
+    background: var(--dk-light);
+    padding: 40px 20px;
+    border-radius: 30px;
+}
+
+.stat-number {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 900;
+    color: var(--dk-dark);
+    display: block;
+    line-height: 1;
+}
+
+.stat-label {
+    color: var(--dk-orange);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* FORMULAIRE & MAP - Mobile Optimized */
+.contact-info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid var(--dk-blue);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    word-wrap: break-word;
+}
+
+.contact-info p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Form Styles */
+#contactForm input,
+#contactForm textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+}
+
+#contactForm .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(243, 107, 33, 0.25);
+}
+
+.alert {
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* FOOTER & UTILS */
+footer {
+    background: var(--dk-dark);
+    color: #888;
+    padding: 40px 20px;
+}
+
+footer a {
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--dk-orange) !important;
+}
+
+#scrollUp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--dk-orange);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s;
+    border: none;
+}
+
+#scrollUp:hover {
+    background: var(--dk-blue);
+    transform: translateY(-3px);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE SPECIFIC OPTIMIZATIONS */
+@media (max-width: 768px) {
+    .hero {
+        clip-path: none;
+        min-height: 70vh;
+    }
+    
+    .section-header {
+        margin: 40px 0 25px;
+    }
+    
+    .dk-card {
+        margin-bottom: 20px;
+    }
+    
+    .navbar-collapse {
+        background: white;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .nav-item {
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .tech-icon {
+        width: 50px;
+        margin: 10px;
+    }
+    
+    #scrollUp {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .map-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .section-header::before {
+        width: 30px;
+        margin-right: 10px;
+    }
+}
+
+/* Tablet Optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        min-height: 75vh;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    #scrollUp,
+    footer a {
+        display: none;
+    }
+}
